@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+</head>
+
+<body>
+    <div>
+            <img id="picture"/>
+    </div>
+    <script>
+        jQuery.ajax('http://localhost:8888/dog').done(function (r) {
+            console.log(typeof r);
+            $('#picture').attr('src', r);
+            console.log(r);
+        })    
+    </script>
+</body>
+
+</html>
